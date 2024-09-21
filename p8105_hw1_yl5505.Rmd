@@ -8,29 +8,47 @@ output: github_document
 ```{r setup, include = FALSE}
 library(tidyverse)
 library(palmerpenguins)
+library(ggplot2)
 ```
 
 # Problem 1
 
+## Load the penguins dataset
 ```{r }
 
 data("penguins", package = "palmerpenguins")
 
 ```
 
-## short description of the penguins dataset
+## Short description of the penguins dataset
 
-The penguins dataset contains observational data, it includes the following important variables:
+The penguins dataset contains observational data, it includes 8 variables:
 
-* species: The species of penguins (Adelie, Chinstrap, Gentoo).
-* island: The island where the penguins were observed (Torgersen, Biscoe, Dream).
-* bill_length_mm: The length of the penguins' bills in millimeters.
-* bill_depth_mm: The depth of the penguins' bills in millimeters.
-* flipper_length_mm: The length of the penguins' flippers in millimeters.
-* body_mass_g: The mass of the penguins in grams.
-* sex: The sex of the penguins (male, female).
+1. species: The species of penguins (Adelie, Chinstrap, Gentoo).
+1. island: The island where the penguins were observed (Torgersen, Biscoe, Dream).
+1. bill_length_mm: The length of the penguins' bills in millimeters.
+1. bill_depth_mm: The depth of the penguins' bills in millimeters.
+1. flipper_length_mm: The length of the penguins' flippers in millimeters.
+1. body_mass_g: The mass of the penguins in grams.
+1. sex: The sex of the penguins (male, female).
+1. year: The year in which the penguin observations were recorded.
 
 The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns. The mean flipper length across all penguins in the dataset is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` mm.
+
+## Scatterplot of Flipper Length vs Bill Length
+
+```{r scatterplot}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) +
+  geom_point()
+```
+
+# Save the plot
+
+```{r export}
+ggsave("penguin_scatterpplot.pdf")
+```
+
+
 
 
 
