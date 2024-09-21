@@ -18,4 +18,23 @@ data("penguins", package = "palmerpenguins")
 
 ```
 
+## short description of the penguins dataset
+
+The penguins dataset contains observational data, it includes the following important variables:
+
+* species: The species of penguins (Adelie, Chinstrap, Gentoo).
+* island: The island where the penguins were observed (Torgersen, Biscoe, Dream).
+* bill_length_mm: The length of the penguins' bills in millimeters.
+* bill_depth_mm: The depth of the penguins' bills in millimeters.
+* flipper_length_mm: The length of the penguins' flippers in millimeters.
+* body_mass_g: The mass of the penguins in grams.
+* sex: The sex of the penguins (male, female).
+
+The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns. The mean flipper length across all penguins in the dataset is `r mean(penguins$flipper_length_mm, na.rm = TRUE)` mm.
+
+
+
+
+
+
 
