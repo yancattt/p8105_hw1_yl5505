@@ -1,0 +1,21 @@
+---
+title: "p8105_hw1_yl5505"
+author: "Yan Li"
+date: "2024-09-21"
+output: github_document
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+# Problem 1
+
+```{r }
+
+data("penguins", package = "palmerpenguins")
+
+```
+
+
