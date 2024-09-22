@@ -72,7 +72,7 @@ mean_cv = mean(pull(p2_data, character_vector))
 mean_fv = mean(pull(p2_data, factor_vector)) 
 
 ```
-The mean of character vector and factor vector cannot be obtained becasue they are non-numeric and cannot be averaged. 
+The mean of character vector and factor vector cannot be obtained because they are non-numeric and cannot be averaged. 
 
 ## Covert to numeric
 
@@ -86,5 +86,6 @@ numeric_fv = as.numeric(pull(p2_data, factor_vector))
 * Character to numeric conversion does not work because there’s no numeric equivalent for character values, the value turns to NA.
 * Factor to numeric conversion works because factor has underlying numeric codes.
 
+# THE END
 
 
