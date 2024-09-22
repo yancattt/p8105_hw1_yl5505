@@ -66,10 +66,10 @@ ggsave("penguin_scatterpplot.pdf")
 
 ## Means of each variable
 ```{r}
-mean_rs = mean(pull(p2_data, random_sample))
-mean_lv = mean(pull(p2_data, logic_vector))
-mean_cv = mean(pull(p2_data, character_vector))
-mean_fv = mean(pull(p2_data, factor_vector)) 
+mean(pull(p2_data, random_sample))
+mean(pull(p2_data, logic_vector))
+mean(pull(p2_data, character_vector))
+mean(pull(p2_data, factor_vector)) 
 
 ```
 The mean of character vector and factor vector cannot be obtained because they are non-numeric and cannot be averaged. 
@@ -77,9 +77,9 @@ The mean of character vector and factor vector cannot be obtained because they a
 ## Covert to numeric
 
 ```{r}
-numeric_lv = as.numeric(pull(p2_data, logic_vector))
-numeric_cv = as.numeric(pull(p2_data, character_vector))
-numeric_fv = as.numeric(pull(p2_data, factor_vector))
+as.numeric(pull(p2_data, logic_vector))
+as.numeric(pull(p2_data, character_vector))
+as.numeric(pull(p2_data, factor_vector))
 
 ```
 * Logic to numeric conversion works because logical values are treated as 1 (TRUE) and 0 (FALSE).
